@@ -25,12 +25,30 @@ a{
     color: white;
     align-items: center;
 }
-.header-btn ul a:hover{
-    background-color: #b44c4ce1;
-    padding: 7px;
-    border-radius: 5px;
-    box-shadow: 2px 4px 16px rgba(235, 218, 218, 0.5);
+
+#nav::before, #nav::after{
+    box-sizing: border-box;
 }
+#nav{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.24rem;
+}
+#nav::before{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:rgb(250, 217, 217);
+    width: 0;
+    transition: width  0.3s ease-out;
+}
+#nav:hover::before{
+    width: 100%;
+}
+
 .logo-cont{
     display: flex;
     align-items: center;
